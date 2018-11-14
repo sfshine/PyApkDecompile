@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /media/sfshine/work/Work/worksoft/工作应用/Android逆向助手/jd-gui
+java -jar jd-gui-1.4.0.jar

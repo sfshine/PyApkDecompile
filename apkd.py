@@ -2,10 +2,8 @@
 import sys
 import os
 import zipfile
-#定义反编译路径, 把dex2jar, ji-gui等放到ApkDecompile文件夹下
-dfile_path=os.path.abspath('apkd.py')
-decompile_lib=dfile_path[0:dfile_path.rindex("/")] + "/libs/"
-
+#定义反编译路径, 请把dex2jar, ji-gui等放到ApkDecompile文件夹下
+decompile_lib=os.path.split(os.path.realpath(__file__))[0] + "/libs/"
 if len(sys.argv) <2:
 	print('Usage: python apkd.py [Apk/Dex filepath]')
 else:

@@ -20,12 +20,18 @@ else:
 		filesInZip.extract("classes.dex", apk_decompile_path)
 		filesInZip.close()
 		file_path = apk_decompile_path + "/classes.dex"
-
 	#反编译dex
 	if "dex" in file_path:
 		print("process dex:"+file_path)
 		jar_path = "{}/output.jar".format(apk_decompile_path)
 		os.system("{}/dex2jar-2.0/d2j-dex2jar.sh {} -o {} --force".format(decompile_lib, file_path ,jar_path))
+	#反编译aar
+	if "aar" in file_path:
+		print("process aar:" + file_path)
+		filesInZip = zipfile.ZipFile(file_path, "r")
+		filesInZip.extract("classes.jar", apk_decompile_path)
+		filesInZip.close()
+		jar_path = apk_decompile_path + "/classes.jar"
 	#直接打开jar
 	if "jar" in file_path:
 		jar_path = file_path;

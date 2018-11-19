@@ -9,3 +9,5 @@ Convince global useage:
 2.sudo mv apkd.sh /usr/bin/
 
 3.chmod a+x /usr/bin/apkd.sh
+
+4.apkd.sh [Apk/Dex filepath]

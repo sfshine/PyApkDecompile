@@ -1,2 +1,2 @@
-APKDHOME=`pwd`
-python ${APKDHOME}/apkd.py $1
+APKDHOME=~/Soft/Android/PyApkDecompile
+python ${APKDHOME}/core_apkd.py $1

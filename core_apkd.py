@@ -1,7 +1,11 @@
  # -*- coding: utf-8 -*
 import sys
+reload(sys)
+sys.setdefaultencoding('UTF8')
+
 import os
 import zipfile
+
 #定义反编译路径, 请把dex2jar, ji-gui等放到ApkDecompile文件夹下
 decompile_lib=os.path.split(os.path.realpath(__file__))[0] + "/libs/"
 if len(sys.argv) <2:
